@@ -1,0 +1,41 @@
+March, 2016
+
+
+Representations of Graphs
+
+Use graphstream
+
+http://graphstream-project.org/doc/Tutorials/GraphStream-Maven/
+
+Ideas for dynamic graphs:
+
+when processing a stream of text, extract terms or relations and dynamically compute
+support of node n at time t
+occurrence of n in document set D_t at time t
+|D_t(n)|
+confidence of a pair of nodes (n_i, n_j) at  time t
+| D_t(n_i) geschnitten D_t(n_j)| / |D_t(n_i)|
+so seen, n_i defines the confidence for n_j (refers to/ defines context)
+
+Dynamic graphs:
+layout of a graph G_t depends on layout of graph at t-1 G_(t-1)
+It also takes into account the information about the support of concepts:
+ the greater the support, the bigger the corresponding node. 
+The “age” of concepts (number of periods where these concepts consecutively appear) is quite important as well: 
+new nodes are marked with yellow
+and when they become older they gradually turn into blue. 
+Moreover, if a concept appears for the first time (not after a break), 
+the corresponding node receives a wide black border.
+
+Using Nemex Text Streams:
+support and confidence can be computed on basis of term frequency
+thus, if we define a time interval t (e.g., N recent chunks)
+we can draw dynamically a graph and visualize the change of nodes
+size of nodes
+age of nodes
+growth of graph
+we only show „young and large enough“ node
+
+
+GNSSMM approach:
+can I also use distance
