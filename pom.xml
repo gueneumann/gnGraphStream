@@ -1,0 +1,45 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>gnGraphStream</groupId>
+  <artifactId>gnGraphStream</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>gnGraphStream</name>
+  <description>dynamic graph stream for NEMEX text stream</description>
+  
+  <url>http://www.dfki.de/~neumann/</url>
+
+	<!-- Set java compiler to 1.7 explicitly Make sure to set JAVA_HOME to point 
+		to the same JDK as used by Eclipse -->
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<!-- Java compiler setting -->
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+
+	</properties>
+	
+	<!-- Start list of dependencies -->
+	<dependencies>
+	<!-- Add a org.graphstream/gs-core/1.1 as dependency -->
+		<dependency>
+			<groupId>org.graphstream</groupId>
+			<artifactId>gs-core</artifactId>
+			<version>1.3</version>
+			<optional>false</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.graphstream</groupId>
+			<artifactId>gs-algo</artifactId>
+			<version>1.3</version>
+			<optional>false</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.graphstream</groupId>
+			<artifactId>gs-ui</artifactId>
+			<version>1.3</version>
+			<optional>false</optional>
+		</dependency>
+	</dependencies>
+</project>
